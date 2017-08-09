@@ -2,7 +2,19 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'web_cal/style.css' %}" />
 <img src="{% static 'web_cal/logo.svg' %}" alt="SELEM 11">
-<h2>Laser Shows</h2>
+        <label for="show-menu" class="show-menu">Show Menu</label>
+        <input type="checkbox" id="show-menu" role="button">
+        <ul id="menu">
+        <li>
+            <a href="#">Laser Shows &#9660;</a>
+            <ul class="hidden">
+                <li><a href="{% url 'presentations' %}">Activities and Presentations</a></li>
+                <li><a href="{% url 'djsets' %}">DJ Sets</a></li>
+            </ul>
+        </li>
+    </ul>
+<br>
+<br>
 {% if event_dict %}
 {% for date, event_list in event_dict.iteritems %}
 <h3>{{ date }}</h3>
