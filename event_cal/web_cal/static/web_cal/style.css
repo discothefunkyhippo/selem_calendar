@@ -1,12 +1,18 @@
 body {
   background-color: #000000;
   color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 img {
   display: block;
   max-width: 350px;
   width: auto;
   height: auto;
+}
+h3 {
+    text-align: center;
+    font-size: 22px;
+    color: #80ff00;
 }
 table {
   /* border: 1px solid #ccc; */
@@ -15,6 +21,7 @@ table {
   padding: 0;
   width: 100%;
   table-layout: fixed;
+  color: #aba3a7;
 }
 table caption {
   font-size: 1.5em;
@@ -151,16 +158,36 @@ input[type=checkbox]:checked ~ #menu{
     font-size: .8em;
     text-align: right;
   }
+
+  table td[data-label=Time] {
+    float: left;
+    font-size: 15px;
+  }
+  table td[data-label=Location] {
+    font-size: 15px;
+  }
+  table td[data-label=Title] {
+    float: left;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  table td[data-label=Presenter] {
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 4px;
+  }
+  /*
   table td:before {
     /*
     * aria-label has no advantage, it won't be read inside a table
     content: attr(aria-label);
     */
-    content: attr(data-label);
+    /* content: attr(data-label);
     float: left;
     font-weight: bold;
-    /*text-transform: uppercase;*/
   }
+  */
+
   table td:last-child {
     border-bottom: 0;
   }
