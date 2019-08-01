@@ -17,6 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^web_cal/', include('web_cal.urls')),
+    url(r'^', include('web_cal.urls')),
     url(r'^admin/', admin.site.urls),
 ]

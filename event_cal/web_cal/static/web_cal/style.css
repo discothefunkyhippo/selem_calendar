@@ -12,7 +12,7 @@ img {
 h3 {
     text-align: center;
     font-size: 22px;
-    color: #80ff00;
+    color: #002aff;
 }
 table {
   /* border: 1px solid #ccc; */
@@ -72,7 +72,7 @@ li a {
 }
 /*Hover state for top level links*/
 li:hover a {
-    background: #ffb200;
+    background: #f200ff;
 }
 /*Style for dropdown links*/
 li:hover ul a {
@@ -85,7 +85,7 @@ li:hover ul a {
 }
 /*Hover state for dropdown links*/
 li:hover ul a:hover {
-    background: #ffb200;
+    background: #f200ff;
     color: #fff;
 }
 /*Hide dropdown links until they are needed*/
@@ -154,9 +154,9 @@ input[type=checkbox]:checked ~ #menu{
   }
   table td {
     /*border-bottom: 1px solid #ddd;*/
-    display: block;
+    display: inline-block;
     font-size: .8em;
-    text-align: right;
+    text-align: left;
   }
 
   table td[data-label=Time] {

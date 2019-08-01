@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'EST'
+TIME_ZONE = 'US/Eastern'
 
 USE_I18N = True
 
@@ -121,4 +121,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Custom settings
-EVENT_NAME = 'SELEM 11'
+EVENT_NAME = 'SELEM 13'

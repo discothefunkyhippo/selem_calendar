@@ -1,3 +1,6 @@
+<head>
+    <meta charset="UTF-8">
+</head>
 <body>
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'web_cal/style.css' %}" />
@@ -6,11 +9,11 @@
         <input type="checkbox" id="show-menu" role="button">
         <ul id="menu">
         <li>
-            <a href="#">DJ Sets &#9660;</a>
+            <a href="#">All Events &#9660;</a>
             <ul class="hidden">
                 <li><a href="{% url 'presentations' %}">Activities and Presentations</a></li>
                 <li><a href="{% url 'lasershows' %}">Laser Shows</a></li>
-                <li><a href="{% url 'all' %}">All Events</a></li>
+                <li><a href="{% url 'djsets' %}">DJ Sets</a></li>
             </ul>
         </li>
     </ul>
