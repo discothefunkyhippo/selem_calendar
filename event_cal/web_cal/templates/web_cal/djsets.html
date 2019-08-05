@@ -18,7 +18,7 @@
 <br>
 {% if event_dict %}
 {% for date, event_list in event_dict.iteritems %}
-<h3>{{ date }}</h3>
+<h3>{{ date|date:"l" }} {{ date }}</h3>
     <table>
         <thead>
         <tr>
