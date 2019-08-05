@@ -51,7 +51,9 @@ def presentations(request):
     event_list = Event.objects.filter(event_type__in=['presentation', 'general']).order_by('event_datetime')
     event_dict = OrderedDict()
     for event in event_list:
-        current_event_date = event.event_datetime.date().strftime(date_format)
+        localized_event_datetime = event.event_datetime.astimezone(tz('US/Eastern'))
+        # current_event_date = event.event_datetime.date().strftime(date_format)
+        current_event_date = localized_event_datetime.date()
         if not event_dict.get(current_event_date, None):
             event_dict[current_event_date] = [event]
         else:
@@ -68,7 +70,9 @@ def laser_shows(request):
     event_list = Event.objects.filter(event_type__in=['laser show', 'general']).order_by('event_datetime')
     event_dict = OrderedDict()
     for event in event_list:
-        current_event_date = event.event_datetime.date().strftime(date_format)
+        localized_event_datetime = event.event_datetime.astimezone(tz('US/Eastern'))
+        # current_event_date = event.event_datetime.date().strftime(date_format)
+        current_event_date = localized_event_datetime.date()
         if not event_dict.get(current_event_date, None):
             event_dict[current_event_date] = [event]
         else:
@@ -85,7 +89,9 @@ def dj_sets(request):
     event_list = Event.objects.filter(event_type__exact='dj set').order_by('event_datetime')
     event_dict = OrderedDict()
     for event in event_list:
-        current_event_date = event.event_datetime.date().strftime(date_format)
+        localized_event_datetime = event.event_datetime.astimezone(tz('US/Eastern'))
+        # current_event_date = event.event_datetime.date().strftime(date_format)
+        current_event_date = localized_event_datetime.date()
         if not event_dict.get(current_event_date, None):
             event_dict[current_event_date] = [event]
         else:
